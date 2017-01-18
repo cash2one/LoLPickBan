@@ -21,11 +21,11 @@ body {
   border-top: 1px solid;
   border-color: inherit;
 
-  -webkit-transform:rotate(-45deg) scale(1.4);
-  -moz-transform:rotate(-45deg) scale(1.4);
-  -ms-transform:rotate(-45deg) scale(1.4);
-  -o-transform:rotate(-45deg) scale(1.4);
-  transform:rotate(-45deg) scale(1.4);
+  -webkit-transform: rotate(-45deg) scale(1.4);
+  -moz-transform: rotate(-45deg) scale(1.4);
+  -ms-transform: rotate(-45deg) scale(1.4);
+  -o-transform: rotate(-45deg) scale(1.4);
+  transform: rotate(-45deg) scale(1.4);
 }
 
 .pick {
@@ -58,5 +58,22 @@ body {
 }
 
 #champs {
-  max-width: 1000px;
+  max-width: 960px;
+}
+
+p {
+  color: white;
+  font-size: 14px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+img {
+  cursor: pointer;
 }
