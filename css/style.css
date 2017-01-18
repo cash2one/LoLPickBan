@@ -1,0 +1,62 @@
+body {
+  background-color: #323636;
+}
+
+.ban {
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin: 10px;
+  padding: 1px;
+  border: 2px solid red;
+  position: relative;
+}
+
+.ban:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+
+  -webkit-transform:rotate(-45deg) scale(1.4);
+  -moz-transform:rotate(-45deg) scale(1.4);
+  -ms-transform:rotate(-45deg) scale(1.4);
+  -o-transform:rotate(-45deg) scale(1.4);
+  transform:rotate(-45deg) scale(1.4);
+}
+
+.pick {
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin: 10px;
+  padding: 1px;
+  border: 2px solid black;
+}
+
+#team1 {
+  margin-left: 10%;
+  margin-right: 25px;
+  max-width: 70px;
+}
+
+#team2 {
+  margin-right: 10%;
+  margin-left: 25px;
+  max-width: 70px;
+}
+
+.team > .Grid-cell {
+  min-width: 64px;
+}
+
+#champs > .Grid-cell {
+  max-width: 64px;
+}
+
+#champs {
+  max-width: 1000px;
+}
