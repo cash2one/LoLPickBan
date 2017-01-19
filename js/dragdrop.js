@@ -214,7 +214,7 @@ function makeChampionStats(champion, div) {
     error: function (data) {
       console.log('returned error');
     }
-  })
+  });
 }
 
 $(document).ready(function () {
