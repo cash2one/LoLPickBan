@@ -207,7 +207,7 @@ function makeChampionStats(champion, div) {
 
   $.ajax({
     type: 'GET',
-    url: 'https://api.champion.gg/champion/' + champion + '/general?api_key=' + apiKey,
+    url: 'http://api.champion.gg/champion/' + champion + '/general?api_key=' + apiKey,
     success: function (data) {
       makeDamageProportions(champion, data, div);
     },
