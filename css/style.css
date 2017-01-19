@@ -30,6 +30,8 @@ body {
 
 .pick {
   float: left;
+  min-width: 64px;
+  max-width: 64px;
   width: 64px;
   height: 64px;
   margin: 10px;
@@ -76,4 +78,58 @@ p {
 
 img {
   cursor: pointer;
+}
+
+.stats {
+  min-width: 64px;
+  max-width: 64px;
+  width: 64px;
+  height: 64px;
+  margin: 10px 7px 10px 7px;
+  padding: 1px;
+
+  /* Centering text inside */
+  text-align: center;
+  vertical-align: middle;
+  /*line-height: 64px;*/
+}
+
+#analyze {
+  visibility: hidden;
+}
+
+.team-analyze {
+  max-width: 170px;
+}
+
+.team-analyze-1 {
+  margin-right: 0;
+}
+
+.team-analyze-2 {
+  margin-left: 0;
+}
+
+.dmgBreakdown {
+  max-height: 64px;
+}
+
+.dmgBreakdown > div {
+  font-size: 13px;
+}
+
+.totalDamage {
+  color: purple;
+}
+
+.trueDamage {
+  color: white;
+}
+
+.magicDamage {
+  color: cornflowerblue;
+}
+
+.physicalDamage {
+  color: darkred;
 }

@@ -2,8 +2,8 @@
 <html>
 <head>
   <script
-    src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-    integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js"></script>
   <script src="js/dragdrop.js"></script>
@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<p>(If the images are not displaying clearly or correctly, try hitting the Reset
-  button. It's a hosting issue.)</p>
-
 <p>Drag and drop champions from the grid to pick/ban slots. Double click champions in pick/ban slots to move them back
   to the champion grid.</p>
 
@@ -355,6 +352,52 @@
     <div class="Grid-cell pick" id="pick2-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   </div>
 
+</div>
+
+<div id="analyze" class="Grid">
+  <div class="Grid Grid-cell team-analyze team-analyze-1">
+    <div id="stats1-1" class="Grid-cell stats"></div>
+    <div id="mirror1-1" class="Grid-cell pick"></div>
+    <div id="stats1-2" class="Grid-cell stats"></div>
+    <div id="mirror1-2" class="Grid-cell pick"></div>
+    <div id="stats1-3" class="Grid-cell stats"></div>
+    <div id="mirror1-3" class="Grid-cell pick"></div>
+    <div id="stats1-4" class="Grid-cell stats"></div>
+    <div id="mirror1-4" class="Grid-cell pick"></div>
+    <div id="stats1-5" class="Grid-cell stats"></div>
+    <div id="mirror1-5" class="Grid-cell pick"></div>
+    <div id="stats1-6" class="Grid-cell stats">
+      <div class="dmgBreakdown" id="total-dmg-1">
+        <div class="totalDamage">0</div>
+        <div class="physicalDamage">0</div>
+        <div class="magicDamage">0</div>
+        <div class="trueDamage">0</div>
+      </div>
+    </div>
+    <div id="mirror1-6" class="Grid-cell pick" style="visibility: hidden;"></div>
+  </div>
+
+  <div class="Grid Grid-cell team-analyze team-analyze-2">
+    <div id="mirror2-1" class="Grid-cell pick"></div>
+    <div id="stats2-1" class="Grid-cell stats"></div>
+    <div id="mirror2-2" class="Grid-cell pick"></div>
+    <div id="stats2-2" class="Grid-cell stats"></div>
+    <div id="mirror2-3" class="Grid-cell pick"></div>
+    <div id="stats2-3" class="Grid-cell stats"></div>
+    <div id="mirror2-4" class="Grid-cell pick"></div>
+    <div id="stats2-4" class="Grid-cell stats"></div>
+    <div id="mirror2-5" class="Grid-cell pick"></div>
+    <div id="stats2-5" class="Grid-cell stats"></div>
+    <div id="mirror2-6" class="Grid-cell pick" style="visibility: hidden;"></div>
+    <div id="stats2-6" class="Grid-cell stats">
+      <div class="dmgBreakdown" id="total-dmg-2">
+        <div class="totalDamage">0</div>
+        <div class="physicalDamage">0</div>
+        <div class="magicDamage">0</div>
+        <div class="trueDamage">0</div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
