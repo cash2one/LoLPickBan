@@ -104,6 +104,14 @@ function checkFullTeams() {
 
 function analyzeTeams() {
   $('#analyze').css('visibility', 'visible');
+
+  for (var i = 1; i <= 2; i++) {
+    var divs = document.getElementById('stats' + i + '-6').children[0].children;
+    for (var j = 0; j < divs.length; j++) {
+      divs[j].innerHTML = "0";
+    }
+  }
+
   for (var i = 1; i <= 2; i++) {
     var totalDamage = 0, physicalDamage = 0, magicDamage = 0, trueDamage = 0;
     for (var j = 1; j <= 5; j++) {
