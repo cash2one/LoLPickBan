@@ -25,6 +25,7 @@
 <p>Hit reset to clear all picks and bans.</p>
 
 <button onclick="reset()">Reset</button>
+<label><input type="checkbox" onclick="handleCheckbox(this)" checked>5 bans</label>
 <div class="Grid noselect" style="display: flex; align-items: center;">
   <div id="team1" class="Grid Grid-cell team">
     <div class="Grid-cell ban" id="ban1-1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -34,6 +35,10 @@
     <div class="Grid-cell pick" id="pick1-1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell pick" id="pick1-2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell pick" id="pick1-3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div class="Grid-cell ban" id="ban1-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="Grid-cell ban" id="ban1-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
     <div class="Grid-cell pick" id="pick1-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell pick" id="pick1-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   </div>
@@ -352,10 +357,13 @@
     <div class="Grid-cell ban" id="ban2-2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell ban" id="ban2-3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-
     <div class="Grid-cell pick" id="pick2-1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell pick" id="pick2-2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell pick" id="pick2-3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div class="Grid-cell ban" id="ban2-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="Grid-cell ban" id="ban2-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
     <div class="Grid-cell pick" id="pick2-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="Grid-cell pick" id="pick2-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   </div>

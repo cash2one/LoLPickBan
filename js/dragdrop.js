@@ -56,10 +56,7 @@ function removeEventListeners() {
   for (var i = 1; i <= 2; i++) {
     for (var j = 1; j <= 5; j++) {
       var str = i + '-' + j;
-      if (j <= 3) {
-        document.getElementById('ban' + str).removeEventListener('dblclick', remove);
-      }
-
+      document.getElementById('ban' + str).removeEventListener('dblclick', remove);
       document.getElementById('pick' + str).addEventListener('dblclick', remove);
     }
   }
@@ -69,10 +66,7 @@ function addEventListeners() {
   for (var i = 1; i <= 2; i++) {
     for (var j = 1; j <= 5; j++) {
       var str = i + '-' + j;
-      if (j <= 3) {
-        document.getElementById('ban' + str).addEventListener('dblclick', remove);
-      }
-
+      document.getElementById('ban' + str).addEventListener('dblclick', remove);
       document.getElementById('pick' + str).addEventListener('dblclick', remove);
     }
   }
@@ -86,8 +80,10 @@ function remove(event) {
 
 // Make SURE that this is a div element and not an img element
 function moveToChamps(divElement) {
-  document.getElementById('champs').appendChild(divElement.lastChild);
-  sort();
+  if (divElement.hasChildNodes()) {
+    document.getElementById('champs').appendChild(divElement.lastChild);
+    sort();
+  }
 }
 
 function checkFullTeams() {
@@ -223,6 +219,30 @@ function makeChampionStats(champion, div) {
       console.log('returned error');
     }
   });
+}
+
+function handleCheckbox(cb) {
+  var div14 = '<div class="Grid-cell ban" id="ban1-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
+  var div15 = '<div class="Grid-cell ban" id="ban1-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
+  var div24 = '<div class="Grid-cell ban" id="ban2-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
+  var div25 = '<div class="Grid-cell ban" id="ban2-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
+
+  if (cb.checked) {
+    $(div14).insertAfter('#pick1-3');
+    $(div15).insertAfter('#ban1-4');
+    $(div24).insertAfter('#pick2-3');
+    $(div25).insertAfter('#ban2-4');
+  } else {
+    moveToChamps(document.getElementById('ban1-4'));
+    moveToChamps(document.getElementById('ban1-5'));
+    moveToChamps(document.getElementById('ban2-4'));
+    moveToChamps(document.getElementById('ban2-5'));
+
+    $('#ban1-4').remove();
+    $('#ban1-5').remove();
+    $('#ban2-4').remove();
+    $('#ban2-5').remove();
+  }
 }
 
 $(document).ready(function () {
