@@ -20,7 +20,10 @@ def get_champion_keys() -> List[str]:
     data = requests.get(url).json()['data'].values()
 
     for champ in data:
-        champion_keys.append(champ['image']['full'])
+        if champ['name'] == 'Fiddlesticks':
+            champion_keys.append('Fiddlesticks.png')  # bug on Riot's end
+        else:
+            champion_keys.append(champ['image']['full'])
 
     return champion_keys
 
@@ -52,5 +55,5 @@ def generate_html():
             out.write(s)
 
 
-# download_champion_images()
+download_champion_images()
 generate_html()
