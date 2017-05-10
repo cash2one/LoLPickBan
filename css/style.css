@@ -133,3 +133,36 @@ img {
 .physicalDamage {
   color: darkred;
 }
+
+.pb-button {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.pb-button:hover {
+  background-color: white; /* Green */
+  color: #555555;
+
+  cursor: pointer;
+}
+
+.pb-button:focus {
+  outline: none;
+}
+
+.pb-checkbox {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  display: inline-block;
+}
