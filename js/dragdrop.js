@@ -221,30 +221,6 @@ function makeChampionStats(champion, div) {
   });
 }
 
-function handleCheckbox(cb) {
-  var div14 = '<div class="Grid-cell ban" id="ban1-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
-  var div15 = '<div class="Grid-cell ban" id="ban1-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
-  var div24 = '<div class="Grid-cell ban" id="ban2-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
-  var div25 = '<div class="Grid-cell ban" id="ban2-5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
-
-  if (cb.checked) {
-    $(div14).insertAfter('#pick1-3');
-    $(div15).insertAfter('#ban1-4');
-    $(div24).insertAfter('#pick2-3');
-    $(div25).insertAfter('#ban2-4');
-  } else {
-    moveToChamps(document.getElementById('ban1-4'));
-    moveToChamps(document.getElementById('ban1-5'));
-    moveToChamps(document.getElementById('ban2-4'));
-    moveToChamps(document.getElementById('ban2-5'));
-
-    $('#ban1-4').remove();
-    $('#ban1-5').remove();
-    $('#ban2-4').remove();
-    $('#ban2-5').remove();
-  }
-}
-
 $(document).ready(function () {
   reset();
 });
